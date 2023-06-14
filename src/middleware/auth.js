@@ -17,7 +17,7 @@ const auth = async (req, res, next) => {
     req.user = user; // Storing user on request, to avoid redundent search
     next();
   } catch {
-    res.status(404).send({ error: 'Please Authenticate.' });
+    res.status(401).send({ error: 'Please Authenticate.' });
   }
 }
 
